@@ -16,32 +16,26 @@ public class Main {
     --> Remove a device from the system
      */
 
-    public ArrayList<Technician> myTechnicians = new ArrayList<Technician>();
-    public ArrayList<Issue> myIssues = new ArrayList<Issue>();
+    public static ArrayList<Technician> myTechnicians = new ArrayList<Technician>();
+    public static ArrayList<Issue> myIssues = new ArrayList<Issue>();
 
     public static void main(String[] args) {
-        LocalDateTime d = LocalDateTime.now();
-
-        Main m = new Main();
-        m.myTechnicians.add(new Technician("Atri", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET"));
-        m.myTechnicians.add(new Technician("Atri1", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET"));
-        m.myTechnicians.add(new Technician("Atri2", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET"));
-        m.myIssues.add(new Issue("bruh", d, "not finished", new User("customer1", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET")));
-        m.myIssues.add(new Issue("bruh", d, "not finished", new User("customer2", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET")));
-        m.myIssues.add(new Issue("bruh", d, "not finished", new User("customer3", "Hegde", "5454658768", "iamatrihegde@gmail.com", "RH11ET")));
-
-        m.myIssues.get(0).setStatus("in progress");
-        m.myIssues.get(1).setStatus("closed");
-
-
-        for(Issue x : m.myIssues){
-            System.out.println(x.toString());
-        }
-
-
-
-
 
     }
+
+
+    public static void customerMenu(){
+
+    }
+    public static void technicianMenu(){
+
+    }
+    public static void adminMenu(){
+
+    }
+    public static void mainMenu(){
+
+    }
+
 
 }

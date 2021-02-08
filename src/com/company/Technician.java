@@ -7,6 +7,11 @@ public class Technician extends Person{
 
     public Technician(String firstName, String lastName, String phNumber, String email, String zipCode) {
         super( firstName,  lastName,  phNumber,  email,  zipCode);
-
     }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " " + phNumber + " " + email + " " + zipCode;
+    }
+
 }

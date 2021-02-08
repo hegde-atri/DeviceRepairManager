@@ -1,5 +1,6 @@
 package com.company;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Issue {
@@ -8,9 +9,9 @@ public class Issue {
     public LocalDateTime initialDate;
     public LocalDateTime deliveryDate;
     public String status;
-    public User customer;
+    public Customer customer;
 
-    public Issue(String id, LocalDateTime initialDate, String status, User customer){
+    public Issue(String id, LocalDateTime initialDate, String status, Customer customer){
         this.id = id;
         this.initialDate = initialDate;
         this.status = status;
@@ -20,13 +21,14 @@ public class Issue {
 
     @Override
     public String toString() {
-        return id + '\'' + ", initialDate = " + initialDate + ", deliveryDate = " + deliveryDate +  status + '\'' + ", customer = " + customer;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return id + " " + initialDate.format(formatter) + " " + status + " " + customer.toString();
     }
 
     public Technician getTechnician(ArrayList<Technician> techList){
         for(Technician tech : techList){
             for(Device d: tech.deviceList){
-                if(d.id.equals(customer.userDevice.id)){
+                if(d.id.equals(customer.customerDevice.id)){
                     return tech;
                 }
             }
@@ -35,11 +37,11 @@ public class Issue {
         return null;
     }
 
-    public User getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(User customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 

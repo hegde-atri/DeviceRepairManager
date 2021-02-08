@@ -7,6 +7,7 @@ public class Person {
     protected String phNumber;
     protected String email;
     protected String zipCode;
+    //Has technician and user class below it.
 
     public Person(String firstName, String lastName, String phNumber, String email, String zipCode) {
         this.firstName = firstName;
@@ -17,10 +18,16 @@ public class Person {
     }
 
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phNumber='" + phNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
 
     public String getFirstName() {
         return firstName;
