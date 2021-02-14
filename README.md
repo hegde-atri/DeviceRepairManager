@@ -1,3 +1,1 @@
-# DeviceRepairManager
-IT repair management application with no GUI
-![](https://github.com/hegde-atri/DeviceRepairManager/blob/master/ClassDiagram.png)
+# All development has been moved to https://github.com/hegde-atri/DeviceRepairManagerGUI
